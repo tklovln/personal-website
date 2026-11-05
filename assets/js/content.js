@@ -47,15 +47,6 @@ window.SITE = {
         ja: "バルセロナの ICASSP 2026 にて",
         ko: "바르셀로나 ICASSP 2026에서"
       }
-    },
-    {
-      src: "assets/img/photo-icassp-badge.jpg",
-      alt: {
-        en: "ICASSP 2026 conference badge",
-        zh: "ICASSP 2026 識別證",
-        ja: "ICASSP 2026 の参加証",
-        ko: "ICASSP 2026 참가증"
-      }
     }
   ],
 
