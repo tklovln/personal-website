@@ -291,6 +291,7 @@
         if (L.openreview) row.appendChild(blackButton(t("btn_openreview"), L.openreview, true));
         if (L.project) row.appendChild(blackButton(t("btn_project"), L.project, true));
         if (L.code) row.appendChild(blackButton(t("btn_code"), L.code, true));
+        if (L.workshop) row.appendChild(blackButton(t("btn_workshop"), L.workshop, true));
         if (L.dataset) row.appendChild(blackButton(t("btn_dataset"), L.dataset, true));
         item.appendChild(row);
         items.appendChild(item);

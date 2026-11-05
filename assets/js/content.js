@@ -70,6 +70,7 @@ window.SITE = {
     btn_project: { en: "Project page", zh: "Project page", ja: "Project page", ko: "Project page" },
     btn_code: { en: "Code", zh: "Code", ja: "Code", ko: "Code" },
     btn_openreview: { en: "OpenReview", zh: "OpenReview", ja: "OpenReview", ko: "OpenReview" },
+    btn_workshop: { en: "Workshop", zh: "Workshop", ja: "Workshop", ko: "Workshop" },
     btn_dataset: { en: "Dataset", zh: "Dataset", ja: "Dataset", ko: "Dataset" },
     btn_email: { en: "Send an email", zh: "寄信給我", ja: "メールを送る", ko: "메일 보내기" },
 
@@ -117,10 +118,11 @@ window.SITE = {
       year: 2026,
       title: "What Makes Generated Content Functionally Legible? A VLM-Judged Ablation with Executable Ground Truth",
       authors: "Ting-Kang Wang",
-      venue: "NeurIPS 2026 Workshop on Reliable Agent Development",
+      venue: "NeurIPS 2026 Workshop: Who Verifies the Agents?",
       links: {
         openreview: "https://openreview.net/forum?id=VKaimW0KzY",
-        project: "https://neurips.cc/virtual/2026/loc/sydney/172984"
+        project: "https://neurips.cc/virtual/2026/loc/sydney/172984",
+        workshop: "https://verify-agents-workshop.github.io/"
       }
     },
     {
