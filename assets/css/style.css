@@ -143,7 +143,7 @@ hr { border: 0; border-top: 1px solid #000; margin: 0; }
 }
 
 /* layout */
-.layout { width: calc(100vw - var(--side)); margin-left: var(--side); }
+.layout { width: calc(100vw - var(--side)); margin-left: var(--side); overflow-x: clip; }
 .page { margin: 0 var(--gutter); padding-top: 80px; }
 
 /* hero */
@@ -197,7 +197,52 @@ hr { border: 0; border-top: 1px solid #000; margin: 0; }
   align-items: start;
   margin-top: 73px;
 }
-.portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.photos { position: relative; }
+.photo-stack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  outline-offset: 12px;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.photo-stack.grad-base { background: transparent; }
+.photo-card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 4% 14%;
+  background: #fbfaf7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .18), 0 10px 28px rgba(0, 0, 0, .10);
+  transform-origin: 50% 60%;
+  transition: transform .55s var(--ease), opacity .45s var(--ease);
+  will-change: transform;
+  cursor: grab;
+}
+.photo-card.dragging { transition: none; cursor: grabbing; }
+.photo-card.gone { opacity: 0; pointer-events: none; }
+.photo-frame { position: relative; flex: 1 1 auto; overflow: hidden; background: #111; }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../img/noise.png);
+  mix-blend-mode: overlay;
+  opacity: .12;
+  pointer-events: none;
+}
+.photo-count {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  font-variant-numeric: tabular-nums;
+}
+.photo-count .now { color: #000; }
+.photo-count .all { color: var(--mute); }
 .about-text p { font-size: 15px; line-height: 2; }
 .about-text p + p { margin-top: 2em; }
 .about-text .btn-row { margin-top: 54px; }
@@ -325,6 +370,8 @@ hr { border: 0; border-top: 1px solid #000; margin: 0; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 43px; }
   .about-text p { font-size: 3.73333vw; line-height: 1.85; }
+  .photo-stack { width: 84%; margin: 0 auto; }
+  .photo-count { margin-top: 32px; text-align: center; }
 
   .contact { display: block; margin-top: 90px; padding: 30px 20px 42px; }
   .contact-art { width: 100%; }

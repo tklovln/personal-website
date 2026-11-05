@@ -437,6 +437,7 @@
     renderMenu();
     renderLangSelects();
     renderSns();
+    updatePhotoAlts();
     updateSideTitle(true);
   }
 
@@ -528,7 +529,124 @@
   });
   document.getElementById("pageTop").addEventListener("click", function () { scrollToHash("#top"); });
 
+  // ---------- photo stack ----------
+  // Cards behind the top one peek out like loose film prints.
+  var PEEK = [
+    { x: 0, y: 0, r: 0 },
+    { x: 16, y: -12, r: 4 },
+    { x: -14, y: -20, r: -4.5 },
+    { x: 24, y: -26, r: 7.5 },
+    { x: -22, y: -32, r: -7 }
+  ];
+  var photoState = { index: 0, cards: [] };
+
+  function placeCards() {
+    var cards = photoState.cards;
+    var n = cards.length;
+    cards.forEach(function (card, i) {
+      var d = i - photoState.index;
+      card.classList.toggle("gone", d < 0);
+      card.setAttribute("aria-hidden", d === 0 ? "false" : "true");
+      if (d < 0) {
+        card.style.transform = "translate(-115%, 4%) rotate(-12deg)";
+        card.style.zIndex = String(n + i);
+        return;
+      }
+      var p = PEEK[Math.min(d, PEEK.length - 1)];
+      card.style.zIndex = String(n - d);
+      card.style.transform = "translate(" + p.x + "px, " + p.y + "px) rotate(" + p.r + "deg) scale(" + (1 - d * 0.015) + ")";
+      card.style.opacity = d >= PEEK.length ? "0" : "";
+    });
+    var count = document.getElementById("photoCount");
+    count.innerHTML = '<span class="now">' + String(photoState.index + 1).padStart(2, "0") +
+      '</span><span class="all">  /  ' + String(n).padStart(2, "0") + "</span>";
+  }
+
+  function goPhoto(i) {
+    var n = photoState.cards.length;
+    photoState.index = Math.max(0, Math.min(n - 1, i));
+    placeCards();
+  }
+
+  function updatePhotoAlts() {
+    photoState.cards.forEach(function (card, i) {
+      card.querySelector("img").alt = loc(SITE.photos[i].alt);
+    });
+  }
+
+  function initPhotos() {
+    var stack = document.getElementById("photoStack");
+    if (!stack || !SITE.photos || !SITE.photos.length) return;
+    SITE.photos.forEach(function (ph, i) {
+      var card = el("div", "photo-card");
+      var frame = el("div", "photo-frame");
+      var img = document.createElement("img");
+      img.src = ph.src;
+      img.width = 960;
+      img.height = 1200;
+      img.draggable = false;
+      if (i > 0) img.loading = "lazy";
+      frame.appendChild(img);
+      card.appendChild(frame);
+      stack.appendChild(card);
+      photoState.cards.push(card);
+    });
+    updatePhotoAlts();
+    placeCards();
+
+    var drag = null;
+    stack.addEventListener("pointerdown", function (e) {
+      var card = photoState.cards[photoState.index];
+      if (!card || e.button > 0) return;
+      drag = { card: card, x0: e.clientX, y0: e.clientY, dx: 0, dy: 0, t0: performance.now(), moved: false, id: e.pointerId };
+    });
+    stack.addEventListener("pointermove", function (e) {
+      if (!drag || e.pointerId !== drag.id) return;
+      drag.dx = e.clientX - drag.x0;
+      drag.dy = e.clientY - drag.y0;
+      if (!drag.moved) {
+        if (Math.abs(drag.dx) < 6) return;
+        if (Math.abs(drag.dy) > Math.abs(drag.dx)) { drag = null; return; }
+        drag.moved = true;
+        drag.card.classList.add("dragging");
+        try { stack.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
+      }
+      var dx = drag.dx;
+      var atEdge = (dx < 0 && photoState.index === photoState.cards.length - 1) || (dx > 0 && photoState.index === 0);
+      if (atEdge) dx = dx * 0.3;
+      drag.card.style.transform = "translate(" + dx + "px, " + (drag.dy * 0.15) + "px) rotate(" + (dx / 18) + "deg)";
+    });
+    function endDrag(e) {
+      if (!drag || (e && e.pointerId !== drag.id)) return;
+      var d = drag;
+      drag = null;
+      d.card.classList.remove("dragging");
+      if (!d.moved) {
+        var n = photoState.cards.length;
+        goPhoto(photoState.index === n - 1 ? 0 : photoState.index + 1);
+        return;
+      }
+      var v = Math.abs(d.dx) / Math.max(1, performance.now() - d.t0);
+      var passed = Math.abs(d.dx) > stack.clientWidth * 0.22 || v > 0.6;
+      if (passed && d.dx < 0) goPhoto(photoState.index + 1);
+      else if (passed && d.dx > 0) goPhoto(photoState.index - 1);
+      else placeCards();
+    }
+    stack.addEventListener("pointerup", endDrag);
+    stack.addEventListener("pointercancel", function (e) {
+      if (!drag) return;
+      drag.card.classList.remove("dragging");
+      drag = null;
+      placeCards();
+    });
+    stack.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); goPhoto(photoState.index + 1); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); goPhoto(photoState.index - 1); }
+    });
+  }
+
   // ---------- boot ----------
+  initPhotos();
   lang = initialLang();
   setLang(lang, false);
   bindButtonHover(menuBtn);

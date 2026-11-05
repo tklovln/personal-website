@@ -10,6 +10,55 @@ window.SITE = {
     scholar: "https://scholar.google.com/citations?user=De7dd2EAAAAJ"
   },
 
+  // Photo stack in the About section, top card first.
+  photos: [
+    {
+      src: "assets/img/portrait.jpg",
+      alt: {
+        en: "Ting-Kang Wang at graduation, holding his poodle",
+        zh: "畢業典禮上抱著貴賓狗的 Ting-Kang Wang",
+        ja: "卒業式でプードルを抱く Ting-Kang Wang",
+        ko: "졸업식에서 푸들을 안고 있는 Ting-Kang Wang"
+      }
+    },
+    {
+      src: "assets/img/photo-violin-stage.jpg",
+      alt: {
+        en: "Playing the violin on stage",
+        zh: "在舞台上演奏小提琴",
+        ja: "ステージでヴァイオリンを演奏",
+        ko: "무대에서 바이올린 연주"
+      }
+    },
+    {
+      src: "assets/img/photo-concert-hall.jpg",
+      alt: {
+        en: "With a violin in a concert hall in front of a pipe organ",
+        zh: "在管風琴前的音樂廳，手持小提琴",
+        ja: "パイプオルガンのあるコンサートホールでヴァイオリンを持って",
+        ko: "파이프 오르간이 있는 콘서트홀에서 바이올린과 함께"
+      }
+    },
+    {
+      src: "assets/img/photo-icassp-2026.jpg",
+      alt: {
+        en: "At ICASSP 2026 in Barcelona",
+        zh: "於巴塞隆納 ICASSP 2026",
+        ja: "バルセロナの ICASSP 2026 にて",
+        ko: "바르셀로나 ICASSP 2026에서"
+      }
+    },
+    {
+      src: "assets/img/photo-icassp-badge.jpg",
+      alt: {
+        en: "ICASSP 2026 conference badge",
+        zh: "ICASSP 2026 識別證",
+        ja: "ICASSP 2026 の参加証",
+        ko: "ICASSP 2026 참가증"
+      }
+    }
+  ],
+
   languages: [
     { code: "en", label: "EN", html: "en" },
     { code: "zh", label: "ZH", html: "zh-Hant" },
