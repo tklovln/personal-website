@@ -150,8 +150,8 @@ hr { border: 0; border-top: 1px solid #000; margin: 0; }
 .hero-art { mix-blend-mode: darken; }
 .hero-art img { width: 100%; }
 .hero-title {
-  margin-top: calc(-3.6vw + 4px);
-  font-size: calc(8.70918vw - 6.96734px);
+  margin-top: calc(-2.4vw + 4px);
+  font-size: calc(7.2vw - 6px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -.01em;
@@ -187,7 +187,7 @@ hr { border: 0; border-top: 1px solid #000; margin: 0; }
 .item-note { margin-top: 6px; font-size: 1.3rem; font-weight: 700; }
 .item .btn-row { margin-top: 36px; }
 
-.footnote { margin-top: 64px; font-size: 1.2rem; color: #000; }
+.item-equal { margin-top: 2px; font-size: 1.2rem; font-weight: 500; letter-spacing: .02em; }
 
 /* about */
 .about-grid {

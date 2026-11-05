@@ -135,10 +135,10 @@ window.SITE = {
     page_top: { en: "Page Top", zh: "Page Top", ja: "Page Top", ko: "Page Top" },
     present: { en: "Present", zh: "現在", ja: "現在", ko: "현재" },
     equal: {
-      en: "* Equal contribution",
-      zh: "* 共同第一作者",
-      ja: "* 筆頭著者同等貢献",
-      ko: "* 공동 제1저자"
+      en: "* Equal contribution (co-first authors)",
+      zh: "* 共同第一作者（貢獻相同）",
+      ja: "* 共同筆頭著者（同等貢献）",
+      ko: "* 공동 제1저자 (동등 기여)"
     }
   },
 
@@ -147,7 +147,7 @@ window.SITE = {
     {
       year: 2026,
       title: "LumiComposer: Negotiating Creative Control Between Illumination, Mapping, and Generative Music Models",
-      authors: "Chi-Hung Huang, Ting-Kang Wang, Chun-Huang Lin",
+      authors: "Ting-Kang Wang*, Chi-Hung Huang*, Chun-Huang Lin*",
       venue: "NeurIPS 2026 Creative AI Track",
       links: {
         openreview: "https://openreview.net/forum?id=QoYWPPU5Vg",
@@ -157,7 +157,7 @@ window.SITE = {
     {
       year: 2026,
       title: "What Makes Generated Content Functionally Legible? A VLM-Judged Ablation with Executable Ground Truth",
-      authors: "Ting-Kang Wang",
+      authors: "Ting-Kang Wang, Szu-Yu Chou",
       venue: "NeurIPS 2026 Workshop: Who Verifies the Agents?",
       links: {
         openreview: "https://openreview.net/forum?id=VKaimW0KzY",
@@ -212,7 +212,7 @@ window.SITE = {
     {
       year: 2025,
       title: "Is Transfer Learning Necessary for Violin Transcription?",
-      authors: "Yueh-Po Peng, Ting-Kang Wang, Li Su, Vincent K. M. Cheung",
+      authors: "Yueh-Po Peng*, Ting-Kang Wang*, Li Su, Vincent K. M. Cheung",
       venue: "ISMIR 2025 Late-Breaking Demo",
       links: {
         arxiv: "https://arxiv.org/abs/2508.13516",

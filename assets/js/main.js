@@ -277,6 +277,13 @@
         authors.setAttribute("data-grad", "");
         aw.appendChild(authors);
         item.appendChild(aw);
+        if (p.authors.indexOf("*") !== -1) {
+          var ew = el("div");
+          var eq = el("p", "item-equal", t("equal"));
+          eq.setAttribute("data-grad", "");
+          ew.appendChild(eq);
+          item.appendChild(ew);
+        }
         if (p.note) {
           var nw = el("div");
           var note = el("p", "item-note", loc(p.note));
