@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ting-Kang Wang</title>
+<meta name="description" content="Ting-Kang (Tim) Wang. Research on music information retrieval, violin transcription, music generation and audio synthesis.">
+<meta property="og:title" content="Ting-Kang Wang">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Research on music information retrieval, violin transcription, music generation and audio synthesis.">
+<meta property="og:image" content="https://tklovln.github.io/personal-website/assets/img/portrait.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700;800&family=Noto+Sans+JP:wght@300;500;700&family=Noto+Sans+KR:wght@300;500;700&family=Noto+Sans+TC:wght@300;500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<div class="menu-button" id="menuButton">
+  <button type="button" class="bb-link" aria-label="Menu" aria-expanded="false" aria-controls="menu">
+    <span class="mb-black"></span><span class="mb-l1"></span><span class="mb-l2"></span>
+  </button>
+</div>
+
+<aside class="sidebar" aria-hidden="false">
+  <div class="sidebar-vertical">
+    <div class="sidebar-title"><span id="sideTitle">About</span></div>
+    <div class="sidebar-lang"><nav class="langselect" data-langselect aria-label="Language"></nav></div>
+  </div>
+</aside>
+
+<header class="header">
+  <a class="logo" href="#top" aria-label="Top">tkwang</a>
+</header>
+
+<div class="layout">
+  <main class="page" id="top">
+
+    <section class="hero" data-section="nav_top">
+      <figure class="hero-art" data-grad-image><img src="assets/img/hero.svg" alt="" width="1200" height="600"></figure>
+      <div class="center"><h1 class="hero-title" data-grad>Ting-Kang Wang</h1></div>
+      <div class="center"><p class="hero-lead" data-grad data-i18n="hero_lead"></p></div>
+      <div class="hero-body-block"><p class="hero-body" data-grad data-i18n="hero_body"></p></div>
+      <div class="divider"><hr></div>
+    </section>
+
+    <section class="block" id="about" data-section="nav_about">
+      <h2 class="block-title"><span data-grad data-i18n="sec_about"></span></h2>
+      <div class="about-grid">
+        <figure class="portrait" data-grad-image>
+          <img src="assets/img/portrait.jpg" alt="Ting-Kang Wang" width="960" height="1200" loading="lazy">
+        </figure>
+        <div class="about-text">
+          <p data-grad data-i18n="about_p1"></p>
+          <p data-grad data-i18n="about_p2"></p>
+          <p data-grad data-i18n="about_p3"></p>
+          <div class="btn-row">
+            <div class="black-button" data-grad><a class="bb-link" data-link="linkedin" target="_blank" rel="noopener noreferrer" data-i18n="btn_linkedin"></a></div>
+            <div class="black-button" data-grad><a class="bb-link" data-link="github" target="_blank" rel="noopener noreferrer" data-i18n="btn_github"></a></div>
+          </div>
+          <p class="about-sub"><a class="text-link" data-link="scholar" target="_blank" rel="noopener noreferrer" data-i18n="btn_scholar" data-grad-link></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="publications" data-section="nav_publications">
+      <h2 class="block-title"><span data-grad data-i18n="sec_publications"></span></h2>
+      <div id="pubList"></div>
+      <p class="footnote"><span data-grad data-i18n="equal"></span></p>
+    </section>
+
+    <section class="block" id="experience" data-section="nav_experience">
+      <h2 class="block-title"><span data-grad data-i18n="sec_experience"></span></h2>
+      <div id="expList"></div>
+    </section>
+
+    <section class="block" id="education" data-section="nav_education">
+      <h2 class="block-title"><span data-grad data-i18n="sec_education"></span></h2>
+      <div id="eduList"></div>
+    </section>
+
+  </main>
+
+  <section class="contact" id="contact" data-section="nav_contact">
+    <div class="contact-art" data-grad-image><img src="assets/img/contact.svg" alt="" width="600" height="400" loading="lazy"></div>
+    <div class="contact-text">
+      <div><h2 class="contact-title" data-grad data-i18n="contact_title"></h2></div>
+      <div><p class="contact-desc" data-grad data-i18n="contact_desc"></p></div>
+      <div class="btn-row">
+        <div class="black-button" data-grad><a class="bb-link" data-link="email" data-i18n="btn_email"></a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-logo"><span data-grad="white">tkwang</span></div>
+    <div class="footer-contact">
+      <div><span class="footer-text" data-grad="white" data-i18n="footer_text"></span></div>
+      <div><a class="footer-mail" data-link="email" data-grad-link data-show-email></a></div>
+    </div>
+    <div class="footer-side">
+      <div class="sns" data-sns></div>
+      <div class="copyright"><span data-grad="white">&copy; <span data-year></span> Ting-Kang Wang</span></div>
+    </div>
+    <button type="button" class="pagetop" id="pageTop"><hr><span data-i18n="page_top"></span></button>
+  </footer>
+</div>
+
+<div class="menu" id="menu" hidden>
+  <div class="menu-full">
+    <div class="menu-bg"></div>
+    <div class="menu-columns">
+      <ul class="menu-list" id="menuList"></ul>
+      <div class="menu-contact">
+        <div><span class="menu-lang" data-grad="white"><nav class="langselect" data-langselect aria-label="Language"></nav></span></div>
+        <div class="menu-mail-block">
+          <div><span class="menu-text" data-grad="white" data-i18n="footer_text"></span></div>
+          <div><a class="menu-mail" data-link="email" data-grad-link data-show-email></a></div>
+        </div>
+        <div class="sns" data-sns></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 600" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#000" stroke-width="1.2"/>
+    </pattern>
+    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.6" fill="#000" stroke="none"/>
+    </pattern>
+    <path id="violinHalf" d="M0,-132 C38,-132 70,-122 73,-92 C76,-64 54,-56 47,-42 C40,-27 40,14 47,29 C56,45 84,55 86,92 C88,124 52,138 0,138"/>
+    <path id="fhole" d="M0,0 C8,10 -8,40 0,52"/>
+  </defs>
+
+  <!-- VR headset -->
+  <g transform="translate(70 70)">
+    <path d="M8 6 C-6 -40 136 -40 122 6" stroke-width="6"/>
+    <rect x="6" y="-2" width="124" height="66" rx="18" fill="#000" stroke="none"/>
+    <rect x="0" y="-8" width="124" height="66" rx="18" fill="#fff"/>
+    <circle cx="36" cy="25" r="17"/>
+    <circle cx="88" cy="25" r="17"/>
+    <circle cx="36" cy="25" r="7" fill="url(#hatch)"/>
+    <circle cx="88" cy="25" r="7" fill="url(#hatch)"/>
+    <path d="M54 58 C58 46 66 46 70 58"/>
+  </g>
+
+  <!-- beamed notes -->
+  <g transform="translate(270 40)">
+    <ellipse cx="12" cy="78" rx="13" ry="9" transform="rotate(-20 12 78)" fill="#000" stroke="none"/>
+    <ellipse cx="72" cy="66" rx="13" ry="9" transform="rotate(-20 72 66)" fill="#000" stroke="none"/>
+    <line x1="23" y1="74" x2="23" y2="6"/>
+    <line x1="83" y1="62" x2="83" y2="-6"/>
+    <path d="M23 6 L83 -6 L83 6 L23 18 Z" fill="#000"/>
+  </g>
+  <g transform="translate(390 90)">
+    <circle cx="0" cy="0" r="16"/>
+    <line x1="0" y1="-16" x2="0" y2="-22"/><line x1="0" y1="16" x2="0" y2="22"/>
+    <line x1="-16" y1="0" x2="-22" y2="0"/><line x1="16" y1="0" x2="22" y2="0"/>
+    <line x1="-11" y1="-11" x2="-16" y2="-16"/><line x1="11" y1="11" x2="16" y2="16"/>
+    <line x1="11" y1="-11" x2="16" y2="-16"/><line x1="-11" y1="11" x2="-16" y2="16"/>
+    <circle cx="0" cy="0" r="6" fill="#000" stroke="none"/>
+  </g>
+
+  <!-- paper stack -->
+  <g transform="translate(180 175)">
+    <rect x="14" y="-12" width="110" height="140" fill="#fff"/>
+    <rect x="6" y="-4" width="110" height="140" fill="#000" stroke="none"/>
+    <rect x="0" y="-10" width="110" height="140" fill="#fff"/>
+    <line x1="16" y1="12" x2="94" y2="12" stroke-width="5"/>
+    <line x1="16" y1="28" x2="72" y2="28"/>
+    <line x1="16" y1="44" x2="94" y2="44"/>
+    <line x1="16" y1="54" x2="94" y2="54"/>
+    <line x1="16" y1="64" x2="80" y2="64"/>
+    <rect x="16" y="78" width="36" height="34" fill="url(#hatch)"/>
+    <line x1="60" y1="84" x2="94" y2="84"/>
+    <line x1="60" y1="94" x2="94" y2="94"/>
+    <line x1="60" y1="104" x2="84" y2="104"/>
+  </g>
+
+  <!-- gamepad -->
+  <g transform="translate(40 330)">
+    <path d="M30 0 H120 C146 0 156 22 160 50 C164 80 150 92 136 84 L112 64 H38 L14 84 C0 92 -14 80 -10 50 C-6 22 4 0 30 0 Z" fill="#fff"/>
+    <path d="M30 22 V48 M17 35 H43" stroke-width="7" stroke-linecap="butt"/>
+    <circle cx="112" cy="26" r="7" fill="#000" stroke="none"/>
+    <circle cx="128" cy="40" r="7"/>
+    <circle cx="96" cy="40" r="7"/>
+    <circle cx="112" cy="54" r="7" fill="#000" stroke="none"/>
+    <line x1="64" y1="30" x2="72" y2="30"/><line x1="80" y1="30" x2="88" y2="30"/>
+  </g>
+
+  <!-- spectrogram grid -->
+  <g transform="translate(250 360)">
+    <rect x="6" y="6" width="150" height="80" fill="#000" stroke="none"/>
+    <rect x="0" y="0" width="150" height="80" fill="#fff"/>
+    <g stroke-width="1">
+      <line x1="0" y1="16" x2="150" y2="16"/><line x1="0" y1="32" x2="150" y2="32"/>
+      <line x1="0" y1="48" x2="150" y2="48"/><line x1="0" y1="64" x2="150" y2="64"/>
+      <line x1="15" y1="0" x2="15" y2="80"/><line x1="30" y1="0" x2="30" y2="80"/>
+      <line x1="45" y1="0" x2="45" y2="80"/><line x1="60" y1="0" x2="60" y2="80"/>
+      <line x1="75" y1="0" x2="75" y2="80"/><line x1="90" y1="0" x2="90" y2="80"/>
+      <line x1="105" y1="0" x2="105" y2="80"/><line x1="120" y1="0" x2="120" y2="80"/>
+      <line x1="135" y1="0" x2="135" y2="80"/>
+    </g>
+    <g fill="#000" stroke="none">
+      <rect x="0" y="48" width="45" height="16"/>
+      <rect x="45" y="32" width="30" height="16"/>
+      <rect x="75" y="16" width="15" height="16"/>
+      <rect x="90" y="32" width="45" height="16"/>
+      <rect x="135" y="48" width="15" height="16"/>
+    </g>
+  </g>
+
+  <!-- metronome -->
+  <g transform="translate(30 462)">
+    <path d="M18 0 H52 L70 100 H0 Z" fill="#fff"/>
+    <rect x="-4" y="100" width="78" height="12" fill="#000" stroke="none"/>
+    <line x1="35" y1="88" x2="58" y2="12"/>
+    <rect x="45" y="36" width="14" height="10" transform="rotate(17 52 41)" fill="#000" stroke="none"/>
+    <circle cx="35" cy="88" r="4" fill="#fff"/>
+  </g>
+
+  <!-- speech bubbles -->
+  <g transform="translate(372 210)">
+    <path d="M0 10 C0 4 4 0 10 0 H62 C68 0 72 4 72 10 V36 C72 42 68 46 62 46 H22 L8 58 L10 46 C4 46 0 42 0 36 Z" fill="#000"/>
+    <circle cx="20" cy="23" r="4" fill="#fff" stroke="none"/>
+    <circle cx="36" cy="23" r="4" fill="#fff" stroke="none"/>
+    <circle cx="52" cy="23" r="4" fill="#fff" stroke="none"/>
+  </g>
+  <g transform="translate(420 268)">
+    <path d="M0 10 C0 4 4 0 10 0 H52 C58 0 62 4 62 10 V32 C62 38 58 42 52 42 H46 L52 54 L36 42 H10 C4 42 0 38 0 32 Z" fill="#fff"/>
+    <circle cx="18" cy="21" r="3.5" fill="#000" stroke="none"/>
+    <circle cx="31" cy="21" r="3.5" fill="#000" stroke="none"/>
+    <circle cx="44" cy="21" r="3.5" fill="#000" stroke="none"/>
+  </g>
+
+  <!-- bow -->
+  <g transform="translate(600 300) rotate(38)">
+    <line x1="-270" y1="0" x2="250" y2="0" stroke-width="3"/>
+    <line x1="-262" y1="10" x2="228" y2="10" stroke-width="1"/>
+    <path d="M250 0 C258 0 262 6 258 12 L228 12" />
+    <rect x="-276" y="-4" width="40" height="18" fill="#000" stroke="none"/>
+    <rect x="-296" y="-3" width="20" height="8" fill="#fff"/>
+    <circle cx="-256" cy="5" r="3" fill="#fff" stroke="none"/>
+  </g>
+
+  <!-- violin -->
+  <g transform="translate(600 300) rotate(-16)">
+    <use xlink:href="#violinHalf" fill="#fff"/>
+    <use xlink:href="#violinHalf" transform="scale(-1 1)" fill="#fff"/>
+    <path d="M0,-132 C38,-132 70,-122 73,-92 C76,-64 54,-56 47,-42 C40,-27 40,14 47,29 C56,45 84,55 86,92 C88,124 52,138 0,138 C-52,138 -88,124 -86,92 C-84,55 -56,45 -47,29 C-40,14 -40,-27 -47,-42 C-54,-56 -76,-64 -73,-92 C-70,-122 -38,-132 0,-132 Z" fill="#fff"/>
+    <path d="M0,-124 C34,-124 63,-115 65,-90 C67,-66 47,-58 40,-44" stroke-width="1"/>
+    <path d="M0,-124 C-34,-124 -63,-115 -65,-90 C-67,-66 -47,-58 -40,-44" stroke-width="1"/>
+    <path d="M40,32 C49,47 76,57 78,90 C80,118 46,130 0,130 C-46,130 -80,118 -78,90 C-76,57 -49,47 -40,32" stroke-width="1"/>
+    <g transform="translate(26 4)"><use xlink:href="#fhole"/><circle cx="1" cy="-2" r="2.5" fill="#000" stroke="none"/><circle cx="0" cy="54" r="2.5" fill="#000" stroke="none"/></g>
+    <g transform="translate(-26 4) scale(-1 1)"><use xlink:href="#fhole"/><circle cx="1" cy="-2" r="2.5" fill="#000" stroke="none"/><circle cx="0" cy="54" r="2.5" fill="#000" stroke="none"/></g>
+    <path d="M-11,-214 L11,-214 L15,6 L-15,6 Z" fill="#000"/>
+    <path d="M-10,-214 V-236 C-10,-246 10,-246 10,-236 V-214" fill="#fff"/>
+    <line x1="-10" y1="-222" x2="-20" y2="-222" stroke-width="4"/>
+    <line x1="10" y1="-230" x2="20" y2="-230" stroke-width="4"/>
+    <line x1="-10" y1="-234" x2="-20" y2="-234" stroke-width="4"/>
+    <line x1="10" y1="-220" x2="20" y2="-220" stroke-width="4"/>
+    <circle cx="0" cy="-256" r="13" fill="#fff"/>
+    <path d="M0,-256 m-6,0 a6,6 0 1,1 6,6 a3,3 0 1,1 -3,-3"/>
+    <path d="M-24,46 C-12,40 12,40 24,46 L20,52 H-20 Z" fill="#fff"/>
+    <path d="M-13,82 L13,82 L8,126 H-8 Z" fill="#000"/>
+    <g stroke-width="1">
+      <line x1="-5" y1="6" x2="-6" y2="84"/><line x1="-1.6" y1="6" x2="-2" y2="84"/>
+      <line x1="1.6" y1="6" x2="2" y2="84"/><line x1="5" y1="6" x2="6" y2="84"/>
+    </g>
+    <g stroke="#fff" stroke-width="0.8">
+      <line x1="-5" y1="-212" x2="-5" y2="4"/><line x1="-1.6" y1="-212" x2="-1.6" y2="4"/>
+      <line x1="1.6" y1="-212" x2="1.6" y2="4"/><line x1="5" y1="-212" x2="5" y2="4"/>
+    </g>
+    <path d="M-60,118 C-44,132 -24,138 -10,138" stroke-width="5"/>
+  </g>
+
+  <!-- poodle -->
+  <g transform="translate(770 350)"><g fill="#fff"><circle cx="140" cy="96" r="10"/><circle cx="150" cy="88" r="8"/></g><g fill="#fff" stroke="none"><circle cx="140" cy="96" r="8.8"/><circle cx="150" cy="88" r="6.8"/></g><g fill="#fff"><circle cx="70" cy="110" r="24"/><circle cx="96" cy="104" r="22"/><circle cx="112" cy="118" r="18"/><circle cx="58" cy="128" r="18"/><circle cx="90" cy="128" r="20"/><circle cx="120" cy="132" r="14"/></g><g fill="#fff" stroke="none"><circle cx="70" cy="110" r="22.8"/><circle cx="96" cy="104" r="20.8"/><circle cx="112" cy="118" r="16.8"/><circle cx="58" cy="128" r="16.8"/><circle cx="90" cy="128" r="18.8"/><circle cx="120" cy="132" r="12.8"/></g><rect x="56" y="140" width="10" height="20" fill="#fff"/><rect x="96" y="142" width="10" height="18" fill="#fff"/><g fill="#fff"><circle cx="60" cy="162" r="9"/><circle cx="100" cy="162" r="9"/></g><g fill="#fff" stroke="none"><circle cx="60" cy="162" r="7.8"/><circle cx="100" cy="162" r="7.8"/></g><g fill="#fff"><circle cx="54" cy="86" r="16"/><circle cx="64" cy="72" r="14"/></g><g fill="#fff" stroke="none"><circle cx="54" cy="86" r="14.8"/><circle cx="64" cy="72" r="12.8"/></g><g fill="#fff"><circle cx="46" cy="40" r="20"/><circle cx="66" cy="30" r="16"/><circle cx="56" cy="14" r="15"/><circle cx="36" cy="18" r="14"/><circle cx="76" cy="46" r="13"/></g><g fill="#fff" stroke="none"><circle cx="46" cy="40" r="18.8"/><circle cx="66" cy="30" r="14.8"/><circle cx="56" cy="14" r="13.8"/><circle cx="36" cy="18" r="12.8"/><circle cx="76" cy="46" r="11.8"/></g><path d="M30 46 C18 46 8 50 8 58 C8 66 20 68 34 64" fill="#fff"/><circle cx="9" cy="56" r="4.5" fill="#000" stroke="none"/><circle cx="40" cy="44" r="3.5" fill="#000" stroke="none"/><path d="M18 66 C22 70 28 70 32 66" stroke-width="1.4"/><g fill="#fff"><circle cx="72" cy="60" r="11"/><circle cx="78" cy="74" r="10"/><circle cx="72" cy="86" r="9"/></g><g fill="#fff" stroke="none"><circle cx="72" cy="60" r="9.8"/><circle cx="78" cy="74" r="8.8"/><circle cx="72" cy="86" r="7.8"/></g><path d="M40 72 L52 64 L52 80 Z M64 72 L52 64 L52 80 Z" fill="#000"/></g>
+
+  <!-- headphones -->
+  <g transform="translate(860 40)">
+    <path d="M10 70 V54 C10 18 34 0 64 0 C94 0 118 18 118 54 V70"/>
+    <path d="M18 70 V56 C18 26 38 10 64 10 C90 10 110 26 110 56 V70" stroke-width="1"/>
+    <rect x="0" y="62" width="26" height="46" rx="8" fill="#000" stroke="none"/>
+    <rect x="102" y="62" width="26" height="46" rx="8" fill="#000" stroke="none"/>
+    <rect x="-8" y="72" width="10" height="26" rx="4" fill="#fff"/>
+    <rect x="126" y="72" width="10" height="26" rx="4" fill="#fff"/>
+  </g>
+
+  <!-- light bulb -->
+  <g transform="translate(1050 70)">
+    <path d="M0 -6 C-26 -6 -36 16 -30 34 C-26 46 -16 52 -14 64 H14 C16 52 26 46 30 34 C36 16 26 -6 0 -6 Z" fill="#fff"/>
+    <rect x="-12" y="64" width="24" height="16" fill="url(#hatch)"/>
+    <path d="M-8 80 H8 C8 90 -8 90 -8 80 Z" fill="#000"/>
+    <path d="M-6 50 V30 L0 38 L6 30 V50" stroke-width="1.4"/>
+    <line x1="0" y1="-20" x2="0" y2="-32"/>
+    <line x1="-34" y1="-6" x2="-42" y2="-14"/><line x1="34" y1="-6" x2="42" y2="-14"/>
+    <line x1="-44" y1="24" x2="-56" y2="24"/><line x1="44" y1="24" x2="56" y2="24"/>
+  </g>
+
+  <!-- laptop -->
+  <g transform="translate(950 170)">
+    <rect x="6" y="6" width="150" height="96" rx="4" fill="#000" stroke="none"/>
+    <rect x="0" y="0" width="150" height="96" rx="4" fill="#fff"/>
+    <rect x="10" y="10" width="130" height="76" fill="#fff" stroke-width="1"/>
+    <line x1="20" y1="24" x2="54" y2="24" stroke-width="4"/>
+    <line x1="34" y1="36" x2="96" y2="36"/>
+    <line x1="34" y1="46" x2="78" y2="46"/>
+    <line x1="48" y1="56" x2="120" y2="56"/>
+    <line x1="34" y1="66" x2="64" y2="66"/>
+    <line x1="20" y1="76" x2="40" y2="76" stroke-width="4"/>
+    <path d="M-16 96 H166 L176 112 H-26 Z" fill="#fff"/>
+    <line x1="58" y1="104" x2="92" y2="104"/>
+  </g>
+
+  <!-- piano keys -->
+  <g transform="translate(940 320)">
+    <rect x="5" y="5" width="168" height="62" fill="#000" stroke="none"/>
+    <rect x="0" y="0" width="168" height="62" fill="#fff"/>
+    <g stroke-width="1.4">
+      <line x1="21" y1="0" x2="21" y2="62"/><line x1="42" y1="0" x2="42" y2="62"/>
+      <line x1="63" y1="0" x2="63" y2="62"/><line x1="84" y1="0" x2="84" y2="62"/>
+      <line x1="105" y1="0" x2="105" y2="62"/><line x1="126" y1="0" x2="126" y2="62"/>
+      <line x1="147" y1="0" x2="147" y2="62"/>
+    </g>
+    <g fill="#000" stroke="none">
+      <rect x="14" y="0" width="13" height="36"/><rect x="36" y="0" width="13" height="36"/>
+      <rect x="77" y="0" width="13" height="36"/><rect x="99" y="0" width="13" height="36"/>
+      <rect x="120" y="0" width="13" height="36"/><rect x="161" y="0" width="7" height="36"/>
+    </g>
+  </g>
+
+  <!-- waveform + cable -->
+  <g transform="translate(1000 420)">
+    <rect x="0" y="0" width="150" height="56" rx="28" fill="#fff"/>
+    <path d="M20 28 h8 l4 -8 l4 16 l4 -22 l4 28 l4 -20 l4 12 l4 -6 l4 4 l4 -14 l4 22 l4 -26 l4 30 l4 -18 l4 8 l4 -4 l4 2 l4 -10 l4 14 l4 -6 l4 2 h22" stroke-width="1.6"/>
+    <path d="M0 28 C-40 28 -36 92 -76 92"/>
+    <circle cx="-80" cy="92" r="5" fill="#000" stroke="none"/>
+  </g>
+
+  <!-- mortarboard -->
+  <g transform="translate(800 225)">
+    <path d="M0 0 L52 -22 L104 0 L52 22 Z" fill="#000"/>
+    <path d="M22 10 V34 C22 44 82 44 82 34 V10" fill="#fff"/>
+    <path d="M52 0 L92 6 V40" stroke-width="1.6"/>
+    <rect x="88" y="38" width="8" height="16" fill="url(#hatch)" stroke-width="1"/>
+  </g>
+
+  <!-- dotted circle -->
+  <g transform="translate(1150 560)">
+    <circle cx="0" cy="0" r="30" fill="url(#dots)" stroke="none"/>
+    <circle cx="0" cy="0" r="30"/>
+  </g>
+</svg>
