@@ -288,8 +288,10 @@
         var L = p.links || {};
         if (L.arxiv) row.appendChild(blackButton(t("btn_arxiv"), L.arxiv, true));
         if (L.paper) row.appendChild(blackButton(t("btn_paper"), L.paper, true));
+        if (L.openreview) row.appendChild(blackButton(t("btn_openreview"), L.openreview, true));
         if (L.project) row.appendChild(blackButton(t("btn_project"), L.project, true));
         if (L.code) row.appendChild(blackButton(t("btn_code"), L.code, true));
+        if (L.dataset) row.appendChild(blackButton(t("btn_dataset"), L.dataset, true));
         item.appendChild(row);
         items.appendChild(item);
       });

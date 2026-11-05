@@ -69,6 +69,8 @@ window.SITE = {
     btn_paper: { en: "Paper", zh: "Paper", ja: "Paper", ko: "Paper" },
     btn_project: { en: "Project page", zh: "Project page", ja: "Project page", ko: "Project page" },
     btn_code: { en: "Code", zh: "Code", ja: "Code", ko: "Code" },
+    btn_openreview: { en: "OpenReview", zh: "OpenReview", ja: "OpenReview", ko: "OpenReview" },
+    btn_dataset: { en: "Dataset", zh: "Dataset", ja: "Dataset", ko: "Dataset" },
     btn_email: { en: "Send an email", zh: "寄信給我", ja: "メールを送る", ko: "메일 보내기" },
 
     contact_title: {
@@ -101,6 +103,26 @@ window.SITE = {
 
   // Order: newest first. "me" marks the author name to highlight.
   publications: [
+    {
+      year: 2026,
+      title: "LumiComposer: Negotiating Creative Control Between Illumination, Mapping, and Generative Music Models",
+      authors: "Chi-Hung Huang, Ting-Kang Wang, Chun-Huang Lin",
+      venue: "NeurIPS 2026 Creative AI Track",
+      links: {
+        openreview: "https://openreview.net/forum?id=QoYWPPU5Vg",
+        project: "https://neurips.cc/virtual/2026/loc/sydney/160672"
+      }
+    },
+    {
+      year: 2026,
+      title: "What Makes Generated Content Functionally Legible? A VLM-Judged Ablation with Executable Ground Truth",
+      authors: "Ting-Kang Wang",
+      venue: "NeurIPS 2026 Workshop on Reliable Agent Development",
+      links: {
+        openreview: "https://openreview.net/forum?id=VKaimW0KzY",
+        project: "https://neurips.cc/virtual/2026/loc/sydney/172984"
+      }
+    },
     {
       year: 2026,
       title: "VioTech: Frame-Level Violin Playing Technique Detection with Multi-Scale Mixture-of-Experts",
@@ -168,6 +190,17 @@ window.SITE = {
       },
       links: {
         paper: "https://doi.org/10.1145/3613905.3648102"
+      }
+    },
+    {
+      year: 2024,
+      title: "S3: A Symbolic Music Dataset for Computational Music Analysis of Symphonies",
+      authors: "Zih-Syuan Lin*, Yu-Chia Kuo*, Tzu-Yun Hung, Wei-Yang Lin, Ya-Hsuan Chu, Ting-Kang Wang, Jing-Heng Huang, Chien Chang, Christofer Julio, Gloria Hsieh, Li Su",
+      venue: "ISMIR 2024 Late-Breaking Demo",
+      links: {
+        paper: "https://archives.ismir.net/ismir2024/latebreaking/000037.pdf",
+        project: "https://ismir2024program.ismir.net/lbd_463.html",
+        dataset: "https://github.com/iis-mctl/mctl-symphony-dataset"
       }
     }
   ],
